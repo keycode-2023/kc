@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
 import * as Joi from 'joi';
 import { UserModule } from './user/user.module';
+import { AppGraphQLModule } from './graphql/graphql.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { UserModule } from './user/user.module';
     }),
     DatabaseModule,
     UserModule,
+    AppGraphQLModule,
   ],
   controllers: [AppController],
   providers: [AppService],

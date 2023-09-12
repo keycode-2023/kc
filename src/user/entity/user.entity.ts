@@ -2,6 +2,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import BaseEntity from '../../common/entity/base';
 
 @Entity()
+
 export class User extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   public id!: string;
@@ -18,9 +19,9 @@ export class User extends BaseEntity {
   @Column()
   public email!: string;
 
-  @Column()
+  @Column({ nullable: true })
   public enteredAt!: Date;
 
-  @Column()
+  @Column({ nullable: true })
   public exitedAt!: Date;
 }

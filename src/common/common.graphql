@@ -1,0 +1,30 @@
+type ObjectCreationPermission {
+  canCreateFramework: Boolean!
+  canCreatePolicy: Boolean!
+  canCreatePolicyFolder: Boolean!
+  canCreateListAndInventory: Boolean!
+}
+
+type UserWithObjectCreationPermission {
+  permission: ObjectCreationPermission!
+}
+
+type Query {
+  me: UserWithObjectCreationPermission!
+}
+
+type User {
+    name: String!
+    email: String!
+    height: String!
+}
+
+input CreateUserInput {
+    name: String!
+    email: String!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput): User!
+}
+
