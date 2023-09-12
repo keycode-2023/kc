@@ -6,10 +6,10 @@ import { ConfigService } from '@nestjs/config';
 dotenv.config();
 const configService = new ConfigService();
 const entities = [
-  __dirname + '/../**/entity/*.ts',
-  __dirname + '/../**/entity/*.js',
-  __dirname + '/../**/*.entity.ts',
-  __dirname + '/../**/*.entity.js',
+  __dirname + '/../../**/entity/*.ts',
+  __dirname + '/../../**/entity/*.js',
+  __dirname + '/../../**/*.entity.ts',
+  __dirname + '/../../**/*.entity.js',
 ];
 const rdbmsConfig = new DataSource({
   entities,
